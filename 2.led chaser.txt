@@ -1,0 +1,55 @@
+                              AIM: design a led chaser 
+
+
+THEORY :
+
+Mostly electronics lights up due to LED. LED has lots of variety like different sizes, shapes and colors also. They have one common thing : they’re bacon of electronics.  
+LED are a particular type of diode that convert electrical energy into light. LED stands for Light Emitting Diode. It requires less power to glow.  
+ 
+Types of LEDs :-  RGB (Red-Green-Blue) LEDs, IR LEDs, SMD LEDs. 
+LEDs is used in remotes also for. LEDs guide us to help to avoid any accidental LED barbecues. They are tiny lightbulbs.  
+ 
+1) Polarity Matters 
+Polarity indicates whether a circuit component is symmetric or not. 
+  
+ 
+2) There is Such a Thing as Too Much Power 
+If we connect an LED directly to a current source it will try to dissipate as much power as it is allowed to draw. 
+ 
+Program :- 
+ 
+int led_red = 0; // the red LED is connected to Pin 0 of the Arduino 
+int led_yellow = 1; // the yellow LED is connected to Pin 1 of the Arduino 
+int led_green = 2; // the green LED is connected to Pin 2 of the Arduino 
+ 
+void setup() { 
+  // set up all the LEDs as OUTPUT 
+  pinMode(led_red, OUTPUT); 
+  pinMode(led_yellow, OUTPUT); 
+  pinMode(led_green, OUTPUT); 
+} 
+ 
+void loop() { 
+  // turn the green LED on and the other LEDs off 
+  digitalWrite(led_red, LOW);  
+  digitalWrite(led_yellow, LOW); 
+  digitalWrite(led_green, HIGH); 
+  delay(2000);    // wait 2 seconds 
+   
+  // turn the yellow LED on and the other LEDs off 
+  digitalWrite(led_red, LOW);    
+  digitalWrite(led_yellow, HIGH); 
+  digitalWrite(led_green, LOW); 
+  delay(1000);   // wait 1 second 
+   
+  // turn the red LED on and the other LEDs off 
+  digitalWrite(led_red, HIGH);   
+  digitalWrite(led_yellow, LOW); 
+  digitalWrite(led_green, LOW); 
+  delay(3000);  // wait 3 seconds         
+} 
+ 
+ 
+Precautions :- 
+ 
+led must not be connected with high voltage current. 
